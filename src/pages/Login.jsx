@@ -15,8 +15,7 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         loginUser(email, password)
-            .then(result => {
-                console.log(result.user);
+            .then( () => {
                 toast.success('Login Successfull')
                 form.reset();
             })

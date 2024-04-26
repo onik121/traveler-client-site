@@ -37,7 +37,7 @@ const Navbar = () => {
                     <Link to={'/'}><img className="w-[180px]" src={logo}></img></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu-horizontal">
+                    <ul className="menu-horizontal gap-5">
                         {navlinks}
                     </ul>
                 </div>

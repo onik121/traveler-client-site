@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContentx } from "../provider/AuthProvider";
@@ -8,8 +8,8 @@ import { updateProfile } from "firebase/auth";
 const Register = () => {
 
     const { createUser } = useContext(AuthContentx)
-
     const [show, setShow] = useState(false);
+    const navigate = useNavigate();
 
     const handleRegister = e => {
         e.preventDefault();
@@ -18,7 +18,6 @@ const Register = () => {
         const name = form.name.value;
         const photo = form.photo.value;
         const password = form.password.value;
-        // console.log(email, name, photo, password);
         if (password.length < 6) {
             toast.error('Password should be at least 6 characters')
             return;
@@ -29,15 +28,14 @@ const Register = () => {
         }
         createUser(email, password)
             .then(result => {
-                // console.log(result.user);
                 toast.success('Successfull')
-                // form.reset();
                 updateProfile(result.user, {
                     displayName: name,
                     photoURL: photo,
                 })
                     .then(() => {
-                        // window.location.reload();
+                        navigate('/')
+                        form.reset();
                     })
             })
             .catch(error => {
@@ -45,6 +43,7 @@ const Register = () => {
                 form.reset();
             })
     }
+    
 
     return (
         <div className="hero flex flex-col items-center justify-center min-h-[700px] max-w-[1440px] mx-auto px-5">
