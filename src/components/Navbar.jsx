@@ -1,7 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from '../assets/logo.svg'
+import { useContext } from "react";
+import { AuthContentx } from "../provider/AuthProvider";
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContentx);
 
     const navlinks = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
@@ -9,6 +14,13 @@ const Navbar = () => {
         <li><NavLink to={'/about'}>My List</NavLink></li>
         <li><NavLink to={'/about'}>Add</NavLink></li>
     </>
+
+    const handleLogOut = () => {
+        logOut()
+            .then(
+                toast.success('Logout Successfull')
+            )
+    }
 
     return (
         <div className="navbar p-0 mb-3 fixed z-50 bg-white">
@@ -30,15 +42,15 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end flex gap-3">
-                    {/* {
+                    {
                         user &&
                         <div className="w-9 tooltip tooltip-bottom cursor-pointer" data-tip={user?.displayName}>
                             {
                                 user && <img className="rounded-full w-[35px] h-[35px]" src={user?.reloadUserInfo?.photoUrl} />
                             }
                         </div>
-                    } */}
-                    <Link to={'/login'}><button className="login-btn">Login</button></Link>
+                    }
+                    {user ? <button onClick={handleLogOut} className="login-btn">Logout</button> : <Link to={'/login'}><button className="login-btn">Login</button></Link>}
                 </div>
             </div>
         </div>

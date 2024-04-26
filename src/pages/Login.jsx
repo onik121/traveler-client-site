@@ -1,8 +1,31 @@
 import { Link } from "react-router-dom";
 import github from '../assets/github.png'
 import google from '../assets/goole.png'
+import { useContext } from "react";
+import { AuthContentx } from "../provider/AuthProvider";
+import toast from 'react-hot-toast';
 
 const Login = () => {
+
+    const { loginUser } = useContext(AuthContentx);
+
+    const handleLogin = e => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        loginUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                toast.success('Login Successfull')
+                form.reset();
+            })
+            .catch(error => {
+                toast.error(error.code)
+                form.reset();
+            })
+    }
+
     return (
         <div className="hero flex flex-col items-center justify-center min-h-[650px] max-w-[1440px] mx-auto px-5">
             <div className="flex items-center justify-center flex-col lg:flex-row-reverse p-0 w-full gap-x-20">
@@ -12,7 +35,7 @@ const Login = () => {
                 </div>
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl rounded-none">
                     <div className="card-body">
-                        <form className="form">
+                        <form className="form" onSubmit={handleLogin}>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text font-semibold">Your Email</span>

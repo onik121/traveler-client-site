@@ -3,6 +3,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContentx } from "../provider/AuthProvider";
 import toast from 'react-hot-toast';
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
 
@@ -17,7 +18,7 @@ const Register = () => {
         const name = form.name.value;
         const photo = form.photo.value;
         const password = form.password.value;
-        console.log(email, name, photo, password);
+        // console.log(email, name, photo, password);
         if (password.length < 6) {
             toast.error('Password should be at least 6 characters')
             return;
@@ -28,9 +29,16 @@ const Register = () => {
         }
         createUser(email, password)
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
                 toast.success('Successfull')
-                form.reset();
+                // form.reset();
+                updateProfile(result.user, {
+                    displayName: name,
+                    photoURL: photo,
+                })
+                    .then(() => {
+                        // window.location.reload();
+                    })
             })
             .catch(error => {
                 toast.error(error.code)
