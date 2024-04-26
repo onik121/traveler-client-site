@@ -1,10 +1,42 @@
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContentx } from "../provider/AuthProvider";
+import toast from 'react-hot-toast';
 
 const Register = () => {
 
+    const { createUser } = useContext(AuthContentx)
+
     const [show, setShow] = useState(false);
+
+    const handleRegister = e => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const name = form.name.value;
+        const photo = form.photo.value;
+        const password = form.password.value;
+        console.log(email, name, photo, password);
+        if (password.length < 6) {
+            toast.error('Password should be at least 6 characters')
+            return;
+        }
+        else if (!/(?=.*[a-z])(?=.*[A-Z])/.test(password)) {
+            toast.error('At least one uppercase and lowercase letter')
+            return;
+        }
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                toast.success('Successfull')
+                form.reset();
+            })
+            .catch(error => {
+                toast.error(error.code)
+                form.reset();
+            })
+    }
 
     return (
         <div className="hero flex flex-col items-center justify-center min-h-[700px] max-w-[1440px] mx-auto px-5">
@@ -14,7 +46,7 @@ const Register = () => {
                     <p className="py-6 login-details">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                 </div>
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl rounded-none">
-                    <form className="card-body form">
+                    <form className="card-body form" onSubmit={handleRegister}>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text font-semibold">Your Name</span>
@@ -53,4 +85,4 @@ const Register = () => {
     );
 };
 
-export default Register;<h1 className="text-2xl"></h1>
+export default Register; <h1 className="text-2xl"></h1>
