@@ -38,7 +38,7 @@
 
 /* home page */
 .slider {
-  height: 70vh;
+  height: 600px;
   background-position: center;
   border-radius: 20px;
 }
@@ -124,4 +124,16 @@
   border: 1px solid rgb(208, 208, 208);
   padding: 7px 13px;
   border-radius: 5px;
+}
+
+
+/* touristsSpot-container */
+.touristsSpot-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 30px;
+}
+
+.touristsSpot-cart{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
