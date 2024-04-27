@@ -8,9 +8,7 @@ const Root = () => {
             <div className="h-[80px] flex justify-center">
                 <Navbar></Navbar>
             </div>
-            <div className="px-5">
-                <Outlet></Outlet>
-            </div>
+            <Outlet></Outlet>
             <Footer></Footer>
         </div>
     );

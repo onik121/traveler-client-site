@@ -4,14 +4,14 @@
 
 
 /* navbar css */
-.menu-horizontal li a.active{
+.menu-horizontal li a.active {
   background-color: #4482ff;
   color: white;
   padding: 10px 15px;
   font-weight: 500;
 }
 
-.menu-horizontal li a{
+.menu-horizontal li a {
   background-color: aliceblue;
   padding: 10px 15px;
   font-weight: 500;
@@ -28,12 +28,29 @@
   font-weight: 500;
 }
 
-.form-control button{
+.form-control button {
   background-color: #4482ff;
   color: white;
   padding: 10px 15px;
   font-weight: 500;
 }
+
+.view {
+  background-color: #4482ff;
+  color: white;
+  padding: 10px 15px;
+  font-weight: 500;
+}
+
+.read-more{
+  background-color: #4482ff;
+  color: white;
+  padding: 8px 15px;
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+
 
 
 /* home page */
@@ -113,13 +130,15 @@
 
 
 /* login page css */
-.form input{
+.form input {
   border-radius: 0px;
   outline: none;
 }
+
 .input:focus {
   outline: none;
 }
+
 .login-option button {
   border: 1px solid rgb(208, 208, 208);
   padding: 7px 13px;
@@ -128,12 +147,48 @@
 
 
 /* touristsSpot-container */
-.touristsSpot-container{
+.touristsSpot-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px 30px;
 }
 
-.touristsSpot-cart{
+.touristsSpot-cart {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+
+
+
+
+/* details */
+.book-details-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px 40px;
+}
+
+.facilities-tag {
+  background-color: #bc986b4D;
+  border-radius: 20px;
+  color: black;
+  padding: 5px 15px;
+  font-weight: 500;
+}
+
+.Line {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(234, 234, 234);
+  margin: 15px 0px;
+}
+
+
+
+
+/*  */
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: rgb(234, 234, 234);
 }

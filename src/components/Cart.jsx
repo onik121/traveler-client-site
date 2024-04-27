@@ -1,18 +1,25 @@
+import { CiLocationOn } from "react-icons/ci";
+import { IoTimeOutline } from "react-icons/io5";
+import { MdOutlineAttachMoney } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Cart = ({ touristsSpot }) => {
 
-    // console.log(touristsSpot.image)
-
-    const { image, seasonality, average_cost, travel_time } = touristsSpot;
+    const { image, seasonality, average_cost, travel_time, country_Name, location, title, _id } = touristsSpot;
 
     return (
+
         <div className="bg-white touristsSpot-cart rounded-3xl overflow-hidden">
-            <img className="h-[300px] w-full" src={image}></img>
+            <img className="h-[280px] w-full" src={image}></img>
             <div className="p-5">
-                <div className="flex justify-between">
-                    <p>{average_cost}</p>
-                    <p className="capitalize">{travel_time}</p>
+                <div className="flex items-center gap-2 mb-2 -ml-1"><CiLocationOn className="text-xl" /><p>{country_Name}, {location}</p></div>
+                <h3 className="text-xl text-black font-semibold">{title}</h3>
+                <div className="line mt-4 mb-7"></div>
+                <div className="flex items-center justify-between  -ml-1">
+                    <div className="flex items-center text-lg font-medium"><MdOutlineAttachMoney className="text-xl" /><p>{average_cost}</p></div>
+                    <div className="flex items-center gap-1"><IoTimeOutline className="text-xl mt-[2px]" /><p className="capitalize">{travel_time}</p></div>
                 </div>
+                <Link to={`/details/${_id}`}><button className="read-more mt-4">Read More</button></Link>
             </div>
         </div>
     );
