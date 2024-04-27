@@ -199,3 +199,34 @@
   height: 1px;
   background-color: rgb(234, 234, 234);
 }
+
+
+
+.country-container{
+  display: grid;
+  grid-template-columns: repeat(6 ,1fr);
+}
+
+.country {
+  background-position: center;
+  background-size: cover;
+}
+
+.country-1 {
+  background-image: url('../src/assets/Bangladesh.jpg');
+}
+.country-2 {
+  background-image: url('../src/assets/thiland.jpg');
+}
+.country-3 {
+  background-image: url('../src/assets/Indonesia.jpg');
+}
+.country-4 {
+  background-image: url('../src/assets/Malaysia.jpg');
+}
+.country-5 {
+  background-image: url('../src/assets/Vietnam.jpg');
+}
+.country-6 {
+  background-image: url('../src/assets/Cambodia.jpg');
+}
