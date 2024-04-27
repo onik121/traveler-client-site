@@ -15,13 +15,13 @@ import { Toaster } from 'react-hot-toast';
 import Home from './pages/Home';
 import Details from './pages/Details';
 import PrivateRoute from './components/PrivateRouter';
-import Error from './pages/Error';
+// import Error from './pages/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement: <Error></Error>,
+    // errorElement: <Error></Error>,
     children: [
       {
         path: '/',

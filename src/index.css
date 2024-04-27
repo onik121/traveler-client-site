@@ -58,6 +58,15 @@
   border-radius: 20px;
 }
 
+.subscribe {
+  background-color: #4482ff;
+  color: white;
+  padding: 8px 15px;
+  font-weight: 500;
+  border-radius: 50px;
+}
+
+
 
 
 /* home page */
@@ -65,12 +74,14 @@
   height: 600px;
   background-position: center;
   border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .overlay {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, .4);
+  background: rgba(0, 0, 0, .2);
   border-radius: 20px;
 }
 
@@ -78,12 +89,8 @@
   margin: 0px 60px;
 }
 
-.slider-1 {
-  background-image: url(../src/assets/2.jpg);
-}
-
 .slider-2 {
-  background-image: url(../src/assets/1.jpg);
+  background-image: url(../src/assets/2.jpg);
 }
 
 .slider-3 {
@@ -131,28 +138,6 @@
   background: #4482ff !important;
 }
 
-
-
-
-
-
-/* login page css */
-.form input {
-  border-radius: 0px;
-  outline: none;
-}
-
-.input:focus {
-  outline: none;
-}
-
-.login-option button {
-  border: 1px solid rgb(208, 208, 208);
-  padding: 7px 13px;
-  border-radius: 5px;
-}
-
-
 /* touristsSpot-container */
 .touristsSpot-container {
   display: grid;
@@ -163,44 +148,6 @@
 .touristsSpot-cart {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-
-
-
-
-
-/* details */
-.book-details-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0px 40px;
-}
-
-.facilities-tag {
-  background-color: #bc986b4D;
-  border-radius: 20px;
-  color: black;
-  padding: 5px 15px;
-  font-weight: 500;
-}
-
-.Line {
-  width: 100%;
-  height: 1px;
-  background-color: rgb(234, 234, 234);
-  margin: 15px 0px;
-}
-
-
-
-
-/*  */
-.line{
-  width: 100%;
-  height: 1px;
-  background-color: rgb(234, 234, 234);
-}
-
-
 
 .country-container{
   display: grid;
@@ -229,4 +176,88 @@
 }
 .country-6 {
   background-image: url('../src/assets/Cambodia.jpg');
+}
+
+
+.update-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid rgb(233, 233, 233);
+}
+.update-container input {
+  outline: none;
+  padding: 0px 20px;
+  height: 100%;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid #4482ff;
+}
+
+
+
+
+
+
+
+
+
+/* login page css */
+.form input {
+  border-radius: 0px;
+  outline: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.login-option button {
+  border: 1px solid rgb(208, 208, 208);
+  padding: 7px 13px;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+/* details page */
+.book-details-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px 40px;
+}
+
+.facilities-tag {
+  background-color: #bc986b4D;
+  border-radius: 20px;
+  color: black;
+  padding: 5px 15px;
+  font-weight: 500;
+}
+
+.Line {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(234, 234, 234);
+  margin: 15px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+/*  */
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: rgb(234, 234, 234);
 }

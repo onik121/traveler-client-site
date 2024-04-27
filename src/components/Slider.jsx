@@ -16,11 +16,11 @@ const Slider = () => {
             navigation
             pagination={{ clickable: true }}>
             <SwiperSlide>
-                <div className='slider-1 slider'>
+                <div className='slider-4 slider'>
                     <div className='overlay flex items-center justify-center'>
                         <div className='text-white text-center max-w-[700px] mx-auto slider-content'>
-                            <h1 className='text-5xl title'>Your Journey to the Perfect Residence Starts Here</h1>
-                            <p className='text-lg mt-5'>Stylish apartments with cutting-edge design, luxurious amenities, and prime city location for an elevated urban lifestyle experience.</p>
+                            <h1 className='text-5xl title font-medium'>Discover Your Dream Home Today!</h1>
+                            <p className='text-lg mt-5'>Sustainable residences with green design, eco-friendly materials, and energy-efficient technologies for a greener, more responsible lifestyle.</p>
                         </div>
                     </div>
                 </div>
@@ -45,16 +45,7 @@ const Slider = () => {
                     </div>
                 </div>
             </SwiperSlide>
-            <SwiperSlide>
-                <div className='slider-4 slider'>
-                    <div className='overlay flex items-center justify-center'>
-                        <div className='text-white text-center max-w-[700px] mx-auto slider-content'>
-                            <h1 className='text-5xl title'>Discover Your Dream Home Today!</h1>
-                            <p className='text-lg mt-5'>Sustainable residences with green design, eco-friendly materials, and energy-efficient technologies for a greener, more responsible lifestyle.</p>
-                        </div>
-                    </div>
-                </div>
-            </SwiperSlide>
+            
         </Swiper>
     );
 };
