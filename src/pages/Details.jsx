@@ -22,16 +22,7 @@ const Details = () => {
                 <div className="book-details-text">
                     <h1 className="text-4xl text-black font-semibold">{data.title}</h1>
                     <h2 className="text-2xl font-medium my-5">{ }</h2>
-                    {/* <div className="Line"></div> */}
                     <p className="mt-4 text-lg text-black">{data.description}</p>
-                    {/* <div className="flex flex-wrap gap-5 my-6">
-                        <span className="font-semibold text-black text-lg mt-[2px]">Facilities</span>
-                        <div className="flex flex-wrap gap-5">
-                            {
-                                book.facilities.map((tag, idx) => <button className='facilities-tag' key={idx}># {tag}</button>)
-                            }
-                        </div>
-                    </div> */}
                     <div className="Line"></div>
                     <div className="space-y-3">
                         <div className="flex items-center gap-2"><CiLocationOn className="text-xl" /><p>{countryName}, {location}</p></div>

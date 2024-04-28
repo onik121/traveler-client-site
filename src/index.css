@@ -303,6 +303,27 @@
 
 
 
+/* my list page */
+.swal2-confirm{
+  background-color: #4482ff !important;
+  border: none !important;
+}
+
+.swal2-title{
+  color: black;
+}
+
+.swal2-warning{
+  border-color: red !important;
+  color: red !important;
+}
+
+.swal2-cancel{
+  background-color: red !important;
+}
+
+
+
 
 /*  */
 .line {
