@@ -51,7 +51,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/mylist',
-        element: <MyList></MyList>
+        element: <MyList></MyList>,
       },
       {
         path: '/alltouristspot',

@@ -1,9 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContentx } from "../provider/AuthProvider";
 import MyListCart from "../components/MyListCart";
+// import { useLoaderData } from "react-router-dom";
 
 const MyList = () => {
-
+    
     const { user } = useContext(AuthContentx);
     const [datas ,setData] = useState([]);
 
@@ -13,12 +14,12 @@ const MyList = () => {
         .then(data => setData(data));
     } ,[user])
 
-    // console.log(datas)
+    console.log(datas)
 
     return (
         <div className='touristsSpot-container w-full max-w-[1440px] mx-auto px-5 min-h-[600px] flex items-center'>
             {
-                datas.map(data => <MyListCart key={data._id} data={data}></MyListCart>)
+                datas.map(cartData => <MyListCart key={cartData._id} cartData={cartData} datas={datas} setData={setData}></MyListCart>)
             }
         </div>
     );
