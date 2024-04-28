@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import github from '../assets/github.png'
 import google from '../assets/goole.png'
 import { useContext } from "react";
@@ -8,6 +8,8 @@ import toast from 'react-hot-toast';
 const Login = () => {
 
     const { loginUser } = useContext(AuthContentx);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const handleLogin = e => {
         e.preventDefault();
@@ -16,8 +18,9 @@ const Login = () => {
         const password = form.password.value;
         loginUser(email, password)
             .then( () => {
+                form.reset()
+                navigate(location?.state ? location.state : '/')
                 toast.success('Login Successfull')
-                form.reset();
             })
             .catch(error => {
                 toast.error(error.code)

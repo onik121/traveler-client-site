@@ -47,11 +47,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/addtouristspot',
-        element: <Add></Add>
+        element: <PrivateRoute><Add></Add></PrivateRoute>,
       },
       {
         path: '/mylist',
-        element: <MyList></MyList>,
+        element: <PrivateRoute><MyList></MyList></PrivateRoute>,
       },
       {
         path: '/alltouristspot',
@@ -60,7 +60,8 @@ const router = createBrowserRouter([
       },
       {
         path : '/update/:id',
-        element: <Update></Update>
+        element: <Update></Update>,
+        loader: ({params}) => fetch(`https://assignment-10-server-red-seven.vercel.app/tourspot/id/${params.id}`)
       }
     ]
   },

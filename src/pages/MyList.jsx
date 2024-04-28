@@ -14,7 +14,7 @@ const MyList = () => {
         .then(data => setData(data));
     } ,[user])
 
-    console.log(datas)
+    // console.log(datas)
 
     return (
         <div className='touristsSpot-container w-full max-w-[1440px] mx-auto px-5 min-h-[600px] flex items-center'>
