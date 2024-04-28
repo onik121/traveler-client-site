@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "image": "https://onik121.github.io/Assignment-10-img/Sundarban.jpg",
         "tourists_spot_name": "Sundarban",
         "country_Name": "Bangladesh",
@@ -13,7 +12,6 @@
         "totalVisitorsPerYear": 20000
     },
     {
-        "id": 2,
         "image": "https://onik121.github.io/Assignment-10-img/Bangkok.jpg",
         "tourists_spot_name": "Bangkok",
         "country_Name": "Thailand",
@@ -26,7 +24,6 @@
         "totalVisitorsPerYear": 3000000
     },
     {
-        "id": 3,
         "image": "https://onik121.github.io/Assignment-10-img/Bali.jpg",
         "tourists_spot_name": "Bali",
         "country_Name": "Indonesia",
@@ -39,7 +36,6 @@
         "totalVisitorsPerYear": 5000000
     },
     {
-        "id": 4,
         "image": "https://onik121.github.io/Assignment-10-img/Kuala-Lumpur.jpg",
         "tourists_spot_name": "Kuala Lumpur",
         "country_Name": "Malaysia",
@@ -52,7 +48,6 @@
         "totalVisitorsPerYear": 2000000
     },
     {
-        "id": 5,
         "image": "https://onik121.github.io/Assignment-10-img/HaLongBay.jpg",
         "tourists_spot_name": "Ha Long Bay",
         "country_Name": "Vietnam",
@@ -65,7 +60,6 @@
         "totalVisitorsPerYear": 1000000
     },
     {
-        "id": 6,
         "image": "https://onik121.github.io/Assignment-10-img/AngkorWat.jpg",
         "tourists_spot_name": "Angkor Wat",
         "country_Name": "Cambodia",
@@ -78,7 +72,6 @@
         "totalVisitorsPerYear": 1500000
     },
     {
-        "id": 7,
         "image": "https://onik121.github.io/Assignment-10-img/HoiAnAncientTown.jpg",
         "tourists_spot_name": "Hoi An Ancient Town",
         "country_Name": "Vietnam",
@@ -91,7 +84,6 @@
         "totalVisitorsPerYear": 1800000
     },
     {
-        "id": 8,
         "image": "https://onik121.github.io/Assignment-10-img/Phuket.jpg",
         "tourists_spot_name": "Phuket",
         "country_Name": "Thailand",
@@ -104,7 +96,6 @@
         "totalVisitorsPerYear": 2500000
     },
     {
-        "id": 9,
         "image": "https://onik121.github.io/Assignment-10-img/Cox'sBazar.jpg",
         "tourists_spot_name": "Cox's Bazar",
         "country_Name": "Bangladesh",
@@ -118,7 +109,6 @@
         "Update_button": true
     },
     {
-        "id": 10,
         "image": "https://onik121.github.io/Assignment-10-img/ChiangMai.jpg",
         "tourists_spot_name": "Chiang Mai",
         "country_Name": "Thailand",
@@ -132,7 +122,6 @@
         "Update_button": true
     },
     {
-        "id": 11,
         "image": "https://onik121.github.io/Assignment-10-img/BorobudurTemple.jpg",
         "tourists_spot_name": "Borobudur Temple",
         "country_Name": "Indonesia",
@@ -146,7 +135,6 @@
         "Update_button": true
     },
     {
-        "id": 12,
         "image": "https://onik121.github.io/Assignment-10-img/Langkawi.jpg",
         "tourists_spot_name": "Langkawi",
         "country_Name": "Malaysia",

@@ -1,16 +1,15 @@
+import { Link } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 import { IoTimeOutline } from "react-icons/io5";
 import { MdOutlineAttachMoney } from "react-icons/md";
 import { FaUserFriends } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
-const Cart = ({ touristsSpot }) => {
+const MyListCart = ({data}) => {
 
-    const { image, seasonality, average_cost, travel_time, countryName, location, title, totalVisitorsPerYear, _id } = touristsSpot;
+    const { image, seasonality, average_cost, travel_time, countryName, location, title, totalVisitorsPerYear, _id } = data;
 
     return (
-
-        <div className="bg-white touristsSpot-cart rounded-3xl overflow-hidden">
+        <div className="bg-white touristsSpot-cart rounded-3xl overflow-hidden min-h-[510px] h-fit">
             <img className="h-[280px] w-full" src={image}></img>
             <div className="p-5">
                 <div className="flex items-center gap-6 mb-2 -ml-1">
@@ -29,4 +28,4 @@ const Cart = ({ touristsSpot }) => {
     );
 };
 
-export default Cart;
+export default MyListCart;

@@ -7,7 +7,7 @@ const Details = () => {
 
     const data = useLoaderData();
 
-    const { travel_time, location, average_cost, country_Name, tourists_spot_name } = data;
+    const { travel_time, location, average_cost, countryName, tourists_spot_name } = data;
     console.log(data)
 
     return (
@@ -34,7 +34,7 @@ const Details = () => {
                     </div> */}
                     <div className="Line"></div>
                     <div className="space-y-3">
-                        <div className="flex items-center gap-2"><CiLocationOn className="text-xl" /><p>{country_Name}, {location}</p></div>
+                        <div className="flex items-center gap-2"><CiLocationOn className="text-xl" /><p>{countryName}, {location}</p></div>
                         <div className="flex items-center text-lg -ml-[3px] gap-[7px]"><MdOutlineAttachMoney className="text-[23px]" /><p>{average_cost}</p></div>
                         <div className="flex items-center gap-2"><IoTimeOutline className="text-xl mt-[2px]" /><p className="capitalize">{travel_time}</p></div>
                     </div>

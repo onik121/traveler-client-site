@@ -15,6 +15,9 @@ import { Toaster } from 'react-hot-toast';
 import Home from './pages/Home';
 import Details from './pages/Details';
 import PrivateRoute from './components/PrivateRouter';
+import Add from './pages/Add';
+import MyList from './pages/MyList';
+import AllSpot from './pages/AllSpot';
 // import Error from './pages/Error';
 
 const router = createBrowserRouter([
@@ -26,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('https://assignment-10-server-red-seven.vercel.app/tourspot'),
+        loader: () => fetch('http://localhost:5000/tourspot'),
       },
       {
         path: '/login',
@@ -39,7 +42,20 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({params}) => fetch(`https://assignment-10-server-red-seven.vercel.app/tourspot/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/tourspot/id/${params.id}`)
+      },
+      {
+        path: '/addtouristspot',
+        element: <Add></Add>
+      },
+      {
+        path: '/mylist',
+        element: <MyList></MyList>
+      },
+      {
+        path: '/alltouristspot',
+        element: <AllSpot></AllSpot>,
+        loader: () => fetch('http://localhost:5000/tourspot'),
       }
     ]
   },
