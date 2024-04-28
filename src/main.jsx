@@ -18,6 +18,7 @@ import PrivateRoute from './components/PrivateRouter';
 import Add from './pages/Add';
 import MyList from './pages/MyList';
 import AllSpot from './pages/AllSpot';
+import Update from './pages/Update';
 // import Error from './pages/Error';
 
 const router = createBrowserRouter([
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/tourspot'),
+        loader: () => fetch('https://assignment-10-server-red-seven.vercel.app/tourspot'),
       },
       {
         path: '/login',
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/tourspot/id/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-10-server-red-seven.vercel.app/tourspot/id/${params.id}`)
       },
       {
         path: '/addtouristspot',
@@ -55,7 +56,11 @@ const router = createBrowserRouter([
       {
         path: '/alltouristspot',
         element: <AllSpot></AllSpot>,
-        loader: () => fetch('http://localhost:5000/tourspot'),
+        loader: () => fetch('https://assignment-10-server-red-seven.vercel.app/tourspot'),
+      },
+      {
+        path : '/update/:id',
+        element: <Update></Update>
       }
     ]
   },

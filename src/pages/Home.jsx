@@ -50,7 +50,7 @@ const Home = () => {
                     <div className='max-w-[1440px] mx-auto px-5 pt-24 pb-24 w-full'>
                         <div className='touristsSpot-container w-full'>
                             {
-                                touristsSpots.slice(0, 14).map(touristsSpot => <Cart key={touristsSpot._id} touristsSpot={touristsSpot}></Cart>)
+                                touristsSpots.slice(0, 6).map(touristsSpot => <Cart key={touristsSpot._id} touristsSpot={touristsSpot}></Cart>)
                             }
                         </div>
                         {/* <div className={data === touristsSpots.length ? 'hidden' : 'text-center'}>

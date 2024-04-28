@@ -8,7 +8,7 @@ const MyList = () => {
     const [datas ,setData] = useState([]);
 
     useEffect( () => {
-        fetch(`http://localhost:5000/tourspot/email/${user?.email}`)
+        fetch(`https://assignment-10-server-red-seven.vercel.app/tourspot/email/${user?.email}`)
         .then(res => res.json())
         .then(data => setData(data));
     } ,[user])
