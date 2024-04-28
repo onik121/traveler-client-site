@@ -9,12 +9,14 @@
   color: white;
   padding: 10px 15px;
   font-weight: 500;
+  border-radius: 5px;
 }
 
 .menu-horizontal li a {
   background-color: aliceblue;
   padding: 10px 15px;
   font-weight: 500;
+  border-radius: 5px;
 }
 
 
@@ -26,6 +28,7 @@
   color: white;
   padding: 8px 15px;
   font-weight: 500;
+  border-radius: 5px;
 }
 
 .form-control button {
@@ -33,6 +36,7 @@
   color: white;
   padding: 10px 15px;
   font-weight: 500;
+  border-radius: 5px;
 }
 
 .view {
@@ -40,6 +44,7 @@
   color: white;
   padding: 10px 15px;
   font-weight: 500;
+  border-radius: 5px;
 }
 
 .read-more {
@@ -48,6 +53,7 @@
   padding: 8px 15px;
   font-weight: 500;
   border-radius: 20px;
+  border-radius: 5px;
 }
 
 .go-back {
@@ -56,6 +62,7 @@
   padding: 8px 15px;
   font-weight: 500;
   border-radius: 20px;
+  border-radius: 5px;
 }
 
 .subscribe {
@@ -64,6 +71,8 @@
   padding: 8px 15px;
   font-weight: 500;
   border-radius: 50px;
+  border-radius: 5px;
+  height: 50px;
 }
 
 .Btn {
@@ -73,6 +82,7 @@
   font-weight: 500;
   border-radius: 10px;
   margin-top: 25px !important;
+  border-radius: 5px;
 }
 
 
@@ -203,7 +213,7 @@
   padding: 0px 20px;
   height: 100%;
   height: 50px;
-  border-radius: 50px;
+  border-radius: 10px;
   border: 1px solid #4482ff;
 }
 
@@ -299,4 +309,106 @@
   width: 100%;
   height: 1px;
   background-color: rgb(234, 234, 234);
+}
+
+.tourspots-img{
+  min-height: 280px;
+  max-height: 280px;
+}
+
+
+/* responsive css code */
+@media screen and (max-width: 1360px) {
+  .tourspots-img{
+    min-height: 260px !important;
+    max-height: 260px !important;
+  }
+}
+
+
+@media screen and (max-width: 1225px) {
+  .tourspots-img{
+    min-height: 235px !important;
+    max-height: 235px !important;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .tourspots-img{
+    min-height: 220px !important;
+    max-height: 220px !important;
+  }
+}
+
+
+@media screen and (max-width: 1025px) {
+  .touristsSpot-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 30px;
+  }
+  .tourspots-img{
+    min-height: 280px !important;
+    max-height: 280px !important;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .tourspots-img{
+    min-height: 250px !important;
+    max-height: 250px !important;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .update-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .update-text-div{
+    padding: 50px 20px;
+  }
+  .tourspots-img{
+    min-height: 220px !important;
+    max-height: 220px !important;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .tourspots-img{
+    min-height: 200px !important;
+    max-height: 200px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .touristsSpot-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px 0px;
+  }
+  .tourspots-img{
+    min-height: 300px !important;
+    max-height: 300px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tourspots-img{
+    min-height: 250px !important;
+    max-height: 250px !important;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .tourspots-img{
+    min-height: 220px !important;
+    max-height: 220px !important;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .tourspots-img{
+    min-height: 200px !important;
+    max-height: 200px !important;
+  }
 }

@@ -18,8 +18,8 @@ const Countries = () => {
         <div className="flex justify-around gap-5">
             {
                 countries.map(country => <Link key={country._id} to={`country/${country._id}`}>
-                    <div className="w-[200px] h-[200px] rounded-full bg-green-200 flex items-center justify-center overflow-hidden">
-                    <img className="w-full h-full" src={country.image}></img>
+                    <div className="w-[200px] h-[135px] bg-green-200 flex items-center justify-center overflow-hidden">
+                    <img className="h-full" src={country.image}></img>
                     </div>
                 </Link>)
             }

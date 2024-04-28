@@ -19,13 +19,13 @@ import Add from './pages/Add';
 import MyList from './pages/MyList';
 import AllSpot from './pages/AllSpot';
 import Update from './pages/Update';
-// import Error from './pages/Error';
+import Error from './pages/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    // errorElement: <Error></Error>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: '/',

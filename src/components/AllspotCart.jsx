@@ -8,8 +8,8 @@ const AllspotCart = ({tourspot}) => {
     const { image, seasonality, average_cost, travel_time, countryName, location, title, totalVisitorsPerYear, _id } = tourspot;
 
     return (
-        <div className="bg-white touristsSpot-cart rounded-3xl overflow-hidden min-h-[510px] h-fit">
-            <img className="h-[280px] w-full" src={image}></img>
+        <div className="bg-white touristsSpot-cart rounded-3xl overflow-hidden sm:min-h-[450px]">
+            <img className="w-full tourspots-img" src={image}></img>
             <div className="p-5">
                 <div className="flex items-center gap-6 mb-3 -ml-1">
                     <div className="flex items-center gap-1"><CiLocationOn className="text-xl" /><p>{countryName}, {location}</p></div>
