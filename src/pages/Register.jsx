@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContentx } from "../provider/AuthProvider";
 import toast from 'react-hot-toast';
 import { updateProfile } from "firebase/auth";
+import { Scroll } from "../components/Scroll";
 
 const Register = () => {
 
@@ -47,6 +48,7 @@ const Register = () => {
 
     return (
         <div className="hero flex flex-col items-center justify-center min-h-[700px] max-w-[1440px] mx-auto px-5">
+            <Scroll></Scroll>
             <div className="flex items-center justify-center flex-col lg:flex-row-reverse p-0 w-full gap-x-20">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold text-black title">Register your account</h1>

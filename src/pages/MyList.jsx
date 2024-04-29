@@ -3,6 +3,7 @@ import { AuthContentx } from "../provider/AuthProvider";
 import MyListCart from "../components/MyListCart";
 import cart from '../assets/add-to-cart.png'
 import { Link } from "react-router-dom";
+import { Scroll } from "../components/Scroll";
 
 const MyList = () => {
 
@@ -13,7 +14,7 @@ const MyList = () => {
         fetch(`https://assignment-10-server-red-seven.vercel.app/tourspot/email/${user?.email}`)
             .then(res => res.json())
             .then(data => setData(data));
-    }, [user])
+    }, [])
 
     if (datas.length === 0) {
        return <div className='w-full max-w-[1440px] mx-auto px-5 min-h-[600px] flex items-center justify-center text-center'>
@@ -27,6 +28,7 @@ const MyList = () => {
 
     return (
         <div className='w-full max-w-[1440px] mx-auto px-5 min-h-[600px] flex items-center'>
+            <Scroll></Scroll>
             <div className="touristsSpot-container">
                 {
                     datas.map(cartData => <MyListCart key={cartData._id} cartData={cartData} datas={datas} setData={setData}></MyListCart>)

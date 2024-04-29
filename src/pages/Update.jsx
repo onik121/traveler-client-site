@@ -1,5 +1,6 @@
 import { useLoaderData, useNavigate } from "react-router-dom"
 import toast from 'react-hot-toast';
+import { Scroll } from "../components/Scroll";
 
 const Update = () => {
 
@@ -43,19 +44,20 @@ const Update = () => {
 
     return (
         <div className="max-w-[1440px] min-h-[600px] mx-auto px-5 my-5">
-            <h1 className="text-center text-3xl text-black font-medium">You can Update your Tourspot here</h1>
+            <Scroll></Scroll>
+            <h1 className="text-center text-3xl text-black font-medium capitalize">You can Update your Tourist Spot here</h1>
             <div className="add-tourists-spot mt-8 max-w-[1000px] mx-auto">
                 <form className="space-y-4" onSubmit={handleUpdateCoffe}>
-                    <div className="flex gap-5">
-                        <div className="w-1/2">
+                    <div className="flex flex-wrap justify-between space-y-3 sm:space-y-0">
+                        <div className='sm:w-[32%] w-full'>
                             <label>Country Name</label>
                             <input className="w-full mt-2" type="text" name="countryname" defaultValue={countryName}/>
                         </div>
-                        <div className="w-1/2">
+                        <div className='sm:w-[32%] w-full'>
                             <label>Title</label>
                             <input className="w-full mt-2" type="text" name="title" defaultValue={title}/>
                         </div>
-                        <div className="w-1/2">
+                        <div className='sm:w-[32%] w-full'>
                             <label>Cost</label>
                             <input className="w-full mt-2" type="text" name="cost" defaultValue={average_cost}/>
                         </div>
@@ -64,32 +66,32 @@ const Update = () => {
                         <label>Description</label>
                         <textarea className="mt-2" name="description" defaultValue={description}></textarea>
                     </div>
-                    <div className="flex gap-5">
-                        <div className="w-1/2">
+                    <div className="flex flex-wrap justify-between space-y-3 sm:space-y-0">
+                        <div className="w-full sm:w-[48.7%]">
                             <label>Location</label>
                             <input className="w-full mt-2" type="text" name="location" defaultValue={location}/>
                         </div>
-                        <div className="w-1/2">
+                        <div className="w-full sm:w-[48.7%]">
                             <label>Spot Name</label>
                             <input className="w-full mt-2" type="text" name="spotname" defaultValue={tourists_spot_name}/>
                         </div>
                     </div>
-                    <div className="flex gap-5">
-                        <div className="w-1/2">
+                    <div className="flex flex-wrap justify-between space-y-3 sm:space-y-0">
+                        <div className="w-full sm:w-[48.7%]">
                             <label>Image Url</label>
                             <input className="w-full mt-2" type="text" name="imageurl" defaultValue={image}/>
                         </div>
-                        <div className="w-1/2">
+                        <div className="w-full sm:w-[48.7%]">
                             <label>Seasonality</label>
                             <input className="w-full mt-2" type="text" name="seasonality" defaultValue={seasonality}/>
                         </div>
                     </div>
-                    <div className="flex gap-5">
-                        <div className="w-1/2">
+                    <div className="flex flex-wrap justify-between space-y-3 sm:space-y-0">
+                        <div className="w-full sm:w-[48.7%]">
                             <label>Travle Time</label>
                             <input className="w-full mt-2" type="text" name="travletime" defaultValue={travel_time}/>
                         </div>
-                        <div className="w-1/2">
+                        <div className="w-full sm:w-[48.7%]">
                             <label>Visitors Per Year</label>
                             <input className="w-full mt-2" type="text" name="visitorperyear" defaultValue={totalVisitorsPerYear}/>
                         </div>

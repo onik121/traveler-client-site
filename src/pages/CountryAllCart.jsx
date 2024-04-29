@@ -1,21 +1,37 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import CountryCart from "../components/CountryCart";
+import { Scroll } from "../components/Scroll";
 
 const CountryAllCart = () => {
 
-    const country = useLoaderData()
-
+    const { id } = useParams();
+    const idAsString = String(id);
     const [datas, setData] = useState([]);
 
     useEffect(() => {
-        fetch(`https://assignment-10-server-red-seven.vercel.app/tourspot/country/${country.countryName}`)
+        fetch(`https://assignment-10-server-red-seven.vercel.app/tourspot/country/${idAsString}`)
             .then(res => res.json())
             .then(data => setData(data));
-    }, [country])
+    }, [idAsString])
+
+    if(datas.length == 0) {
+        return <div className="min-h-screen flex items-center justify-center">
+            <span className="loading loading-spinner loading-lg"></span>
+        </div>;
+    }
 
     return (
-        <div className="max-w-[1440px] mx-auto px-5">
-            {country.countryName} {datas.length}
+        <div className='w-full max-w-[1440px] mx-auto px-5 min-h-[600px] flex items-center'>
+            <Scroll></Scroll>
+            <div className="my-5">
+                <h1 className='text-3xl text-center font-semibold text-black mb-10 capitalize'>most beautiful Tourist Spot on {idAsString}</h1>
+                <div className="touristsSpot-container">
+                    {
+                        datas.map(data => <CountryCart key={data._id} data={data}></CountryCart>)
+                    }
+                </div>
+            </div>
         </div>
     );
 };

@@ -6,6 +6,7 @@ import { AuthContentx } from "../provider/AuthProvider";
 import toast from 'react-hot-toast';
 import { FacebookAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "../firebase/firebase.config";
+import { Scroll } from "../components/Scroll";
 
 const Login = () => {
 
@@ -57,6 +58,7 @@ const Login = () => {
 
     return (
         <div className="hero flex flex-col items-center justify-center min-h-[650px] max-w-[1440px] mx-auto px-5">
+            <Scroll></Scroll>
             <div className="flex items-center justify-center flex-col lg:flex-row-reverse p-0 w-full gap-x-20">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold text-black title">Login your account</h1>

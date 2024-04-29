@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 import { IoTimeOutline } from "react-icons/io5";
 import { MdOutlineAttachMoney } from "react-icons/md";
+import { Scroll } from "../components/Scroll";
 
 const Details = () => {
 
@@ -11,6 +12,7 @@ const Details = () => {
 
     return (
         <div className="max-w-[1440px] mx-auto px-5 min-h-[600px] flex items-center">
+            <Scroll></Scroll>
             <div className="book-details-container flex items-center">
                 <div className="book-details-img">
                     <div>

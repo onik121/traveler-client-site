@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContentx } from '../provider/AuthProvider';
+import { Scroll } from '../components/Scroll';
 
 
 const Add = () => {
@@ -21,10 +22,8 @@ const Add = () => {
         const travel_time = form.travletime.value;
         const totalVisitorsPerYear = form.visitorperyear.value;
         const username = form.username.value;
-        // const email = form.email.value;
         const email = user.email;
         const data = {countryName, title, average_cost, description, location, tourists_spot_name, image, seasonality, travel_time, totalVisitorsPerYear, username, email}
-        // console.log(countryName);
         fetch('https://assignment-10-server-red-seven.vercel.app/tourspot', {
             method: 'POST',
             headers: {
@@ -44,10 +43,11 @@ const Add = () => {
 
     return (
         <div className="max-w-[1440px] min-h-[600px] mx-auto px-5 my-5">
-            <h1 className="text-center text-3xl text-black font-medium">You can add your favourite Tourists here</h1>
+            <Scroll></Scroll>
+            <h1 className="text-center text-3xl text-black font-medium capitalize">You can add your favourite Tourist Spot here</h1>
             <div className="add-tourists-spot mt-8 max-w-[1000px] mx-auto">
                 <form className="space-y-4" onSubmit={hanldeAddTourspot}>
-                    <div className="flex flex-wrap justify-between">
+                    <div className="flex flex-wrap justify-between space-y-3 sm:space-y-0">
                         <div className='sm:w-[32%] w-full'>
                             <label>Country Name</label>
                             <input className="w-full mt-2" type="text" name="countryname" required/>
@@ -65,7 +65,7 @@ const Add = () => {
                         <label>Description</label>
                         <textarea className="mt-2" name="description" required></textarea>
                     </div>
-                    <div className="flex flex-wrap justify-between">
+                    <div className="flex flex-wrap justify-between space-y-3 sm:space-y-0">
                         <div className="w-full sm:w-[48.7%]">
                             <label>Location</label>
                             <input className="w-full mt-2" type="text" name="location" required/>
@@ -75,7 +75,7 @@ const Add = () => {
                             <input className="w-full mt-2" type="text" name="spotname" required/>
                         </div>
                     </div>
-                    <div className="flex flex-wrap justify-between">
+                    <div className="flex flex-wrap justify-between space-y-3 sm:space-y-0">
                         <div className="w-full sm:w-[48.7%]">
                             <label>Image Url</label>
                             <input className="w-full mt-2" type="text" name="imageurl" required/>
@@ -85,7 +85,7 @@ const Add = () => {
                             <input className="w-full mt-2" type="text" name="seasonality" required/>
                         </div>
                     </div>
-                    <div className="flex flex-wrap justify-between">
+                    <div className="flex flex-wrap justify-between space-y-3 sm:space-y-0">
                         <div className="w-full sm:w-[48.7%]">
                             <label>Travle Time</label>
                             <input className="w-full mt-2" type="text" name="travletime" required/>
@@ -95,7 +95,7 @@ const Add = () => {
                             <input className="w-full mt-2" type="text" name="visitorperyear" required/>
                         </div>
                     </div>
-                    <div className="flex flex-wrap justify-between">
+                    <div className="flex flex-wrap justify-between space-y-3 sm:space-y-0">
                         <div className="w-full sm:w-[48.7%]">
                             <label>User Name</label>
                             <input className="w-full mt-2" type="text" name="username" required/>

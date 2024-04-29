@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-
 import {
   createBrowserRouter,
   RouterProvider,
@@ -21,6 +20,7 @@ import AllSpot from './pages/AllSpot';
 import Update from './pages/Update';
 import Error from './pages/Error';
 import CountryAllCart from './pages/CountryAllCart';
+
 
 const router = createBrowserRouter([
   {
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({params}) => fetch(`https://assignment-10-server-red-seven.vercel.app/tourspot/id/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-10-server-red-seven.vercel.app/tourspot/id/${params.id}`)
       },
       {
         path: '/addtouristspot',
@@ -60,14 +60,13 @@ const router = createBrowserRouter([
         loader: () => fetch('https://assignment-10-server-red-seven.vercel.app/tourspot'),
       },
       {
-        path : '/update/:id',
+        path: '/update/:id',
         element: <Update></Update>,
-        loader: ({params}) => fetch(`https://assignment-10-server-red-seven.vercel.app/tourspot/id/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-10-server-red-seven.vercel.app/tourspot/id/${params.id}`)
       },
       {
         path: '/country/:id',
         element: <CountryAllCart></CountryAllCart>,
-        loader: ({params}) => fetch(`https://assignment-10-server-red-seven.vercel.app/countries/id/${params.id}`)
       }
     ]
   },

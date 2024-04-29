@@ -8,7 +8,6 @@ import img from '../assets/h1-img-1.png'
 const Home = () => {
 
     const touristsSpots = useLoaderData();
-    // const [data, setData] = useState(6)
 
     return (
         <div>
@@ -22,7 +21,8 @@ const Home = () => {
                         <Countries></Countries>
                     </div>
                 </div>
-                <div className="max-w-[1440px] px-5 mx-auto mb-20">
+                <div className="max-w-[1440px] px-5 mx-auto mb-16 text-center">
+                    <h1 className='text-4xl text-center font-semibold text-black mb-14'>Explore The World Yourself</h1>
                     <img src={img}></img>
                 </div>
                 <div className='flex bg-[#f7f8fa]'>
