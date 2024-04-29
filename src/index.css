@@ -169,37 +169,27 @@
 
 .country-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.country {
-  background-position: center;
-  background-size: cover;
+.country-content {
+  bottom: -100px;
+  color: white;
+  padding: 10px;
+  transition:  all 0.3s;
 }
 
-.country-1 {
-  background-image: url('../src/assets/Bangladesh.jpg');
+.onik:hover .country-content{
+  bottom: 0px;
 }
 
-.country-2 {
-  background-image: url('../src/assets/thiland.jpg');
+.onik:hover img{
+  filter: brightness(0.4);
 }
 
-.country-3 {
-  background-image: url('../src/assets/Indonesia.jpg');
-}
 
-.country-4 {
-  background-image: url('../src/assets/Malaysia.jpg');
-}
 
-.country-5 {
-  background-image: url('../src/assets/Vietnam.jpg');
-}
 
-.country-6 {
-  background-image: url('../src/assets/Cambodia.jpg');
-}
 
 
 .update-container {
@@ -304,21 +294,21 @@
 
 
 /* my list page */
-.swal2-confirm{
+.swal2-confirm {
   background-color: #4482ff !important;
   border: none !important;
 }
 
-.swal2-title{
+.swal2-title {
   color: black;
 }
 
-.swal2-warning{
+.swal2-warning {
   border-color: red !important;
   color: red !important;
 }
 
-.swal2-cancel{
+.swal2-cancel {
   background-color: red !important;
 }
 
@@ -332,19 +322,22 @@
   background-color: rgb(234, 234, 234);
 }
 
-.tourspots-img{
+.tourspots-img {
   min-height: 280px;
   max-height: 280px;
 }
 
 
-.social{
+.social {
   border: 2px solid #4482ff;
 }
 
+
+
+
 /* responsive css code */
 @media screen and (max-width: 1360px) {
-  .tourspots-img{
+  .tourspots-img {
     min-height: 260px !important;
     max-height: 260px !important;
   }
@@ -352,14 +345,14 @@
 
 
 @media screen and (max-width: 1225px) {
-  .tourspots-img{
+  .tourspots-img {
     min-height: 235px !important;
     max-height: 235px !important;
   }
 }
 
 @media screen and (max-width: 1150px) {
-  .tourspots-img{
+  .tourspots-img {
     min-height: 220px !important;
     max-height: 220px !important;
   }
@@ -371,7 +364,8 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 30px;
   }
-  .tourspots-img{
+
+  .tourspots-img {
     min-height: 280px !important;
     max-height: 280px !important;
   }
@@ -379,7 +373,7 @@
 
 
 @media screen and (max-width: 900px) {
-  .tourspots-img{
+  .tourspots-img {
     min-height: 250px !important;
     max-height: 250px !important;
   }
@@ -390,17 +384,23 @@
   .update-container {
     grid-template-columns: repeat(1, 1fr);
   }
-  .update-text-div{
+
+  .update-text-div {
     padding: 50px 20px;
   }
-  .tourspots-img{
+
+  .tourspots-img {
     min-height: 220px !important;
     max-height: 220px !important;
+  }
+
+  .country-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 680px) {
-  .tourspots-img{
+  .tourspots-img {
     min-height: 200px !important;
     max-height: 200px !important;
   }
@@ -411,28 +411,33 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 30px 0px;
   }
-  .tourspots-img{
+
+  .tourspots-img {
     min-height: 300px !important;
     max-height: 300px !important;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .tourspots-img{
+  .tourspots-img {
     min-height: 250px !important;
     max-height: 250px !important;
+  }
+
+  .country-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
 @media screen and (max-width: 430px) {
-  .tourspots-img{
+  .tourspots-img {
     min-height: 220px !important;
     max-height: 220px !important;
   }
 }
 
 @media screen and (max-width: 360px) {
-  .tourspots-img{
+  .tourspots-img {
     min-height: 200px !important;
     max-height: 200px !important;
   }

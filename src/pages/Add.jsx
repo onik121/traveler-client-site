@@ -10,7 +10,7 @@ const Add = () => {
     const hanldeAddTourspot = e => {
         e.preventDefault();
         const form = e.target;
-        const countryName = form.countryname.value;
+        let countryName = form.countryname.value.toLowerCase();
         const title = form.title.value;
         const average_cost = form.cost.value;
         const description = form.description.value;

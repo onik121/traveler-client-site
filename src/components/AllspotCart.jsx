@@ -3,9 +3,10 @@ import { CiLocationOn } from "react-icons/ci";
 import { IoTimeOutline } from "react-icons/io5";
 import { MdOutlineAttachMoney } from "react-icons/md";
 import { FaUserFriends } from "react-icons/fa";
+import { PropTypes } from 'prop-types';
 
 const AllspotCart = ({tourspot}) => {
-    const { image, seasonality, average_cost, travel_time, countryName, location, title, totalVisitorsPerYear, _id } = tourspot;
+    const { image, average_cost, travel_time, countryName, location, title, totalVisitorsPerYear, _id } = tourspot;
 
     return (
         <div className="bg-white touristsSpot-cart rounded-3xl overflow-hidden sm:min-h-[450px]">
@@ -26,5 +27,9 @@ const AllspotCart = ({tourspot}) => {
         </div>
     );
 };
+
+AllspotCart.propTypes = {
+    tourspot : PropTypes,
+}
 
 export default AllspotCart;

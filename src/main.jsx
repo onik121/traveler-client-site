@@ -20,6 +20,7 @@ import MyList from './pages/MyList';
 import AllSpot from './pages/AllSpot';
 import Update from './pages/Update';
 import Error from './pages/Error';
+import CountryAllCart from './pages/CountryAllCart';
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,11 @@ const router = createBrowserRouter([
         path : '/update/:id',
         element: <Update></Update>,
         loader: ({params}) => fetch(`https://assignment-10-server-red-seven.vercel.app/tourspot/id/${params.id}`)
+      },
+      {
+        path: '/country/:id',
+        element: <CountryAllCart></CountryAllCart>,
+        loader: ({params}) => fetch(`http://localhost:5000/countries/id/${params.id}`)
       }
     ]
   },
