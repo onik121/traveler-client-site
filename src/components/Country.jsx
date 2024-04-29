@@ -4,12 +4,10 @@ import PropTypes from 'prop-types'; // ES6
 
 const Country = ({ countrydata }) => {
 
-    // console.log(country)
-
     return (
-        <div className="relative onik">
+        <div className="relative onik rounded-2xl overflow-hidden">
             <Link to={`/country/${countrydata.countryName}`}>
-                <div className="h-auto">
+                <div>
                     <img className="w-full h-full" src={countrydata.image}></img>
                     <div className="country-content absolute">
                         <h1 className="text-2xl capitalize font-medium">{countrydata.countryName}</h1>

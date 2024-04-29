@@ -8,7 +8,7 @@ const CountryAllCart = () => {
     const [datas, setData] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/tourspot/country/${country.countryName}`)
+        fetch(`https://assignment-10-server-red-seven.vercel.app/tourspot/country/${country.countryName}`)
             .then(res => res.json())
             .then(data => setData(data));
     }, [country])

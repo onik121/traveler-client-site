@@ -6,8 +6,6 @@ const AllSpot = () => {
 
     const tourspots = useLoaderData();
 
-    // console.log(tourspots)
-
     return (
         <div className="touristsSpot-container w-full max-w-[1440px] mx-auto px-5 my-5">
             {

@@ -3,6 +3,7 @@ import Slider from '../components/Slider';
 import Cart from '../components/Cart';
 import GetUpdate from '../components/GetUpdate';
 import Countries from '../components/Countries';
+import img from '../assets/h1-img-1.png'
 
 const Home = () => {
 
@@ -15,9 +16,14 @@ const Home = () => {
                 <div className="max-w-[1440px] px-5 mx-auto">
                     <Slider></Slider>
                 </div>
-                <div className="max-w-[1440px] px-5 mx-auto my-20">
-                    <h1 className='text-4xl text-center font-semibold text-black mb-10'>Top Destinations</h1>
-                    <Countries></Countries>
+                <div className="bg-[#f7f8fa]">
+                    <div className='max-w-[1440px] px-5 mx-auto my-20 py-20'>
+                        <h1 className='text-4xl text-center font-semibold text-black mb-10'>Top Destinations</h1>
+                        <Countries></Countries>
+                    </div>
+                </div>
+                <div className="max-w-[1440px] px-5 mx-auto mb-20">
+                    <img src={img}></img>
                 </div>
                 <div className='flex bg-[#f7f8fa]'>
                     <div className='max-w-[1440px] mx-auto px-5 pt-24 pb-24 w-full'>

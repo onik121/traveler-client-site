@@ -67,7 +67,7 @@ const router = createBrowserRouter([
       {
         path: '/country/:id',
         element: <CountryAllCart></CountryAllCart>,
-        loader: ({params}) => fetch(`http://localhost:5000/countries/id/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-10-server-red-seven.vercel.app/countries/id/${params.id}`)
       }
     ]
   },

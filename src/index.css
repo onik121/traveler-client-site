@@ -173,17 +173,17 @@
 }
 
 .country-content {
-  bottom: -100px;
+  bottom: -110px;
   color: white;
   padding: 10px;
-  transition:  all 0.3s;
+  transition: all 0.3s;
 }
 
-.onik:hover .country-content{
+.onik:hover .country-content {
   bottom: 0px;
 }
 
-.onik:hover img{
+.onik:hover img {
   filter: brightness(0.4);
 }
 

@@ -3,17 +3,18 @@ import { IoTimeOutline } from "react-icons/io5";
 import { MdOutlineAttachMoney } from "react-icons/md";
 import { FaUserFriends } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { PropTypes } from 'prop-types';
 
 const Cart = ({ touristsSpot }) => {
 
-    const { image, seasonality, average_cost, travel_time, countryName, location, title, totalVisitorsPerYear, _id } = touristsSpot;
+    const { image, average_cost, travel_time, countryName, location, title, totalVisitorsPerYear, _id } = touristsSpot;
 
     return (
         <div className="bg-white touristsSpot-cart rounded-3xl overflow-hidden sm:min-h-[450px]">
             <img className="w-full tourspots-img" src={image}></img>
             <div className="p-5">
                 <div className="flex items-center gap-6 mb-3 -ml-1">
-                    <div className="flex items-center gap-1"><CiLocationOn className="text-xl" /><p>{countryName}, {location}</p></div>
+                    <div className="flex items-center gap-1"><CiLocationOn className="text-xl" /><p className="capitalize">{countryName}, {location}</p></div>
                     <div className="flex items-center gap-2"><FaUserFriends className="text-xl"/><p>{totalVisitorsPerYear}</p></div>
                 </div>
                 <h3 className="text-xl text-black font-semibold">{title}</h3>
@@ -27,5 +28,9 @@ const Cart = ({ touristsSpot }) => {
         </div>
     );
 };
+
+Cart.propTypes = {
+    touristsSpot: PropTypes,
+}
 
 export default Cart;
