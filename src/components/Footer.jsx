@@ -1,4 +1,7 @@
 import logo from '../assets/logo.svg'
+import facebook from '../assets/facebook1.png'
+import instagram from '../assets/instagram.png'
+import twitter from '../assets/twitter.png'
 
 const Footer = () => {
     return (
@@ -9,25 +12,33 @@ const Footer = () => {
                     <p className='mt-3 text-base font-semibold'>Discover a place to call your own where dreams come home.</p>
                 </aside>
                 <nav>
-                    <h6 className="text-2xl text-black font-semibold mb-2">Explore</h6>
-                    <a className="link link-hover">Home</a>
-                    <a className="link link-hover">About Us</a>
-                    <a className="link link-hover">Contact</a>
-                </nav>
-                <nav>
                     <h6 className="text-2xl text-black font-semibold mb-2">Legal</h6>
                     <a className="link link-hover">Terms of use</a>
                     <a className="link link-hover">Privacy policy</a>
                     <a className="link link-hover">Cookie policy</a>
                 </nav>
                 <nav>
-                    <h6 className="text-2xl text-black font-semibold mb-2">Follow</h6>
-                    <a className="link link-hover">Facebook</a>
-                    <a className="link link-hover">Instagram</a>
-                    <a className="link link-hover">Twitter</a>
+                    <h6 className="text-2xl text-black font-semibold mb-2">Contact Us</h6>
+                    <a className="link link-hover">Feni Sadar, Feni, Bangladesh</a>
+                    <a className="link link-hover">+88 01608272038</a>
+                    <a className="link link-hover">roam@qodeinteractive.com</a>
+                </nav>
+                <nav>
+                    <h6 className="text-2xl text-black font-semibold mb-2">Follow Us</h6>
+                    <div className='flex gap-4'>
+                        <div className='w-[47px] h-[47px] rounded-full flex items-center justify-center social'>
+                            <img src={instagram}></img>
+                        </div>
+                        <div className='w-[47px] h-[47px] rounded-full flex items-center justify-center social'>
+                            <img src={facebook}></img>
+                        </div>
+                        <div className='w-[47px] h-[47px] rounded-full flex items-center justify-center social'>
+                            <img src={twitter}></img>
+                        </div>
+                    </div>
                 </nav>
             </footer>
-            <footer className="footer footer-center py-4 bg-[#31323c] text-white">
+            <footer className="footer footer-center py-4 bg-[#f0f8ff] text-black font-medium">
                 <p className="text-base">Copyright © 2024 - All right reserved by My Home Industries Ltd.</p>
             </footer>
         </div>

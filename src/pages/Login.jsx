@@ -1,15 +1,20 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import github from '../assets/github.png'
+import facebook from '../assets/facebook.png'
 import google from '../assets/goole.png'
 import { useContext } from "react";
 import { AuthContentx } from "../provider/AuthProvider";
 import toast from 'react-hot-toast';
+import { FacebookAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import auth from "../firebase/firebase.config";
 
 const Login = () => {
 
     const { loginUser } = useContext(AuthContentx);
     const navigate = useNavigate();
     const location = useLocation();
+    const googlrProvider = new GoogleAuthProvider();
+    // const githubProvider = new GithubAuthProvider();
+    const facebookProvider = new FacebookAuthProvider();
 
     const handleLogin = e => {
         e.preventDefault();
@@ -25,6 +30,28 @@ const Login = () => {
             .catch(error => {
                 toast.error(error.code)
                 form.reset();
+            })
+    }
+
+    const handleGoogleLogin = () => {
+        signInWithPopup(auth, googlrProvider)
+            .then(() => {
+                toast.success('Successfully login')
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                toast.error(error.code)
+            })
+    }
+
+    const handleFacebookLogin = () => {
+        signInWithPopup(auth, facebookProvider)
+            .then(() => {
+                toast.success('Successfully login')
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                toast.error(error.code)
             })
     }
 
@@ -58,8 +85,8 @@ const Login = () => {
                         </form>
                         <p className="text-center mt-2">or use one of these options</p>
                         <div className="flex gap-4 justify-center login-option mt-2">
-                            <button><img src={google} alt="Google" /></button>
-                            <button><img src={github} alt="Facebook" /></button>
+                            <button onClick={handleGoogleLogin}><img src={google} alt="Google" /></button>
+                            <button onClick={handleFacebookLogin}><img src={facebook} alt="Facebook" /></button>
                         </div>
                         <p className="text-center mt-4">Dont’t Have An Account ? <span className="font-semibold text-[#4482ff]"><Link to={'/register'}>Register</Link></span></p>
                     </div>

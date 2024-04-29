@@ -9,8 +9,6 @@ const MyList = () => {
     const { user } = useContext(AuthContentx);
     const [datas, setData] = useState([]);
 
-    console.log(datas)
-
     useEffect(() => {
         fetch(`https://assignment-10-server-red-seven.vercel.app/tourspot/email/${user?.email}`)
             .then(res => res.json())
@@ -18,7 +16,7 @@ const MyList = () => {
     }, [user])
 
     if (datas.length === 0) {
-        return <div className='w-full max-w-[1440px] mx-auto px-5 min-h-[600px] flex items-center justify-center text-center'>
+       return <div className='w-full max-w-[1440px] mx-auto px-5 min-h-[600px] flex items-center justify-center text-center'>
             <div className="">
                 <img className="w-[80px] mx-auto" src={cart}></img>
                 <h1 className="text-2xl mt-5 mb-7 capitalize max-w-[400px]">add your favourite tour place where you want to visit</h1>

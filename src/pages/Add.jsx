@@ -1,11 +1,11 @@
-// import { useContext } from 'react';
+import { useContext } from 'react';
 import toast from 'react-hot-toast';
-// import { AuthContentx } from '../provider/AuthProvider';
+import { AuthContentx } from '../provider/AuthProvider';
 
 
 const Add = () => {
 
-    // const { user } = useContext(AuthContentx);
+    const { user } = useContext(AuthContentx);
 
     const hanldeAddTourspot = e => {
         e.preventDefault();
@@ -21,8 +21,8 @@ const Add = () => {
         const travel_time = form.travletime.value;
         const totalVisitorsPerYear = form.visitorperyear.value;
         const username = form.username.value;
-        const email = form.email.value;
-        // const userEmail = user.email;
+        // const email = form.email.value;
+        const email = user.email;
         const data = {countryName, title, average_cost, description, location, tourists_spot_name, image, seasonality, travel_time, totalVisitorsPerYear, username, email}
         // console.log(user.email);
         fetch('https://assignment-10-server-red-seven.vercel.app/tourspot', {

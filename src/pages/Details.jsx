@@ -8,7 +8,6 @@ const Details = () => {
     const data = useLoaderData();
 
     const { travel_time, location, average_cost, countryName, tourists_spot_name } = data;
-    // console.log(data)
 
     return (
         <div className="max-w-[1440px] mx-auto px-5 min-h-[600px] flex items-center">
