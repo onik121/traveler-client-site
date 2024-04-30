@@ -1,6 +1,6 @@
 # React + Vite
-Website Name: My Home
-Live Url: https://aesthetic-crisp-ad577c.netlify.app/
++ Website Name: My Home
++ Live Url: https://aesthetic-crisp-ad577c.netlify.app/
 
 # Features of my website
 + The website is fully responisve
