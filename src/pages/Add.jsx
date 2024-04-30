@@ -44,65 +44,65 @@ const Add = () => {
     return (
         <div className="max-w-[1440px] min-h-[600px] mx-auto px-5 my-5">
             <Scroll></Scroll>
-            <h1 className="text-center text-3xl text-black font-medium capitalize">You can add your favourite Tourist Spot here</h1>
-            <div className="add-tourists-spot mt-8 max-w-[1000px] mx-auto">
-                <form className="space-y-4" onSubmit={hanldeAddTourspot}>
+            <h1 className="text-center text-3xl font-medium capitalize title text-color">You can add your favourite Tourist Spot here</h1>
+            <div className="add-tourists-spot mt-8 max-w-[1000px] mx-auto shado">
+                <form className="space-y-4 text-color" onSubmit={hanldeAddTourspot}>
                     <div className="flex flex-wrap justify-between space-y-3 sm:space-y-0">
                         <div className='sm:w-[32%] w-full'>
                             <label>Country Name</label>
-                            <input className="w-full mt-2" type="text" name="countryname" required/>
+                            <input className="w-full mt-2 input" type="text" name="countryname" required/>
                         </div>
                         <div className='sm:w-[32%] w-full'>
                             <label>Title</label>
-                            <input className="w-full mt-2" type="text" name="title" required/>
+                            <input className="w-full mt-2 input" type="text" name="title" required/>
                         </div>
                         <div className='sm:w-[32%] w-full'>
                             <label>Cost</label>
-                            <input className="w-full mt-2" type="text" name="cost" required/>
+                            <input className="w-full mt-2 input" type="text" name="cost" required/>
                         </div>
                     </div>
                     <div>
                         <label>Description</label>
-                        <textarea className="mt-2" name="description" required></textarea>
+                        <textarea className="mt-2 input" name="description" required></textarea>
                     </div>
                     <div className="flex flex-wrap justify-between space-y-3 sm:space-y-0">
                         <div className="w-full sm:w-[48.7%]">
                             <label>Location</label>
-                            <input className="w-full mt-2" type="text" name="location" required/>
+                            <input className="w-full mt-2 input" type="text" name="location" required/>
                         </div>
                         <div className="w-full sm:w-[48.7%]">
                             <label>Spot Name</label>
-                            <input className="w-full mt-2" type="text" name="spotname" required/>
+                            <input className="w-full mt-2 input" type="text" name="spotname" required/>
                         </div>
                     </div>
                     <div className="flex flex-wrap justify-between space-y-3 sm:space-y-0">
                         <div className="w-full sm:w-[48.7%]">
                             <label>Image Url</label>
-                            <input className="w-full mt-2" type="text" name="imageurl" required/>
+                            <input className="w-full mt-2 input" type="text" name="imageurl" required/>
                         </div>
                         <div className="w-full sm:w-[48.7%]">
                             <label>Seasonality</label>
-                            <input className="w-full mt-2" type="text" name="seasonality" required/>
+                            <input className="w-full mt-2 input" type="text" name="seasonality" required/>
                         </div>
                     </div>
                     <div className="flex flex-wrap justify-between space-y-3 sm:space-y-0">
                         <div className="w-full sm:w-[48.7%]">
                             <label>Travle Time</label>
-                            <input className="w-full mt-2" type="text" name="travletime" required/>
+                            <input className="w-full mt-2 input" type="text" name="travletime" required/>
                         </div>
                         <div className="w-full sm:w-[48.7%]">
                             <label>Visitors Per Year</label>
-                            <input className="w-full mt-2" type="text" name="visitorperyear" required/>
+                            <input className="w-full mt-2 input" type="text" name="visitorperyear" required/>
                         </div>
                     </div>
                     <div className="flex flex-wrap justify-between space-y-3 sm:space-y-0">
                         <div className="w-full sm:w-[48.7%]">
                             <label>User Name</label>
-                            <input className="w-full mt-2" type="text" name="username" required/>
+                            <input className="w-full mt-2 input" type="text" name="username" required/>
                         </div>
                         <div className="w-full sm:w-[48.7%]">
                             <label>Your Email</label>
-                            <input className="w-full mt-2" type="email" name="email" required/>
+                            <input className="w-full mt-2 input" type="email" name="email" required/>
                         </div>
                     </div>
                     <button className="Btn w-full">Add</button>

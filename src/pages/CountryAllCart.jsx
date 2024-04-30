@@ -25,7 +25,7 @@ const CountryAllCart = () => {
         <div className='w-full max-w-[1440px] mx-auto px-5 min-h-[600px] flex items-center'>
             <Scroll></Scroll>
             <div className="my-5">
-                <h1 className='text-3xl text-center font-semibold text-black mb-10 capitalize'>most beautiful Tourist Spot on {idAsString}</h1>
+                <h1 className='text-4xl text-center font-semibold text-black mb-10 capitalize title'>most beautiful Tourist Spot on {idAsString}</h1>
                 <div className="touristsSpot-container">
                     {
                         datas.map(data => <CountryCart key={data._id} data={data}></CountryCart>)

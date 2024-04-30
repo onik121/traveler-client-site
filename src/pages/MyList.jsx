@@ -20,7 +20,7 @@ const MyList = () => {
         return <div className='w-full max-w-[1440px] mx-auto px-5 min-h-[600px] flex items-center justify-center text-center'>
             <div className="">
                 <img className="w-[80px] mx-auto" src={cart}></img>
-                <h1 className="text-2xl mt-5 mb-7 capitalize max-w-[400px]">add your favourite tour place where you want to visit</h1>
+                <h1 className="text-2xl mt-5 mb-7 capitalize max-w-[400px] text-color">add your favourite tour place where you want to visit</h1>
                 <Link className="go-back" to={'/addtouristspot'}>Add</Link>
             </div>
         </div>

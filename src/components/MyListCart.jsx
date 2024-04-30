@@ -39,8 +39,8 @@ const MyListCart = ({ cartData, setData, datas }) => {
 
     return (
         <div className="w-full">
-            <div className="w-full touristsSpot-cart flex flex-wrap justify-around my-5 p-5 items-center tabular-form gap-5">
-                <div className="flex gap-1 text-black">
+            <div className="w-full touristsSpot-cart flex flex-wrap justify-around my-5 p-5 items-center tabular-form gap-5 text-color">
+                <div className="flex gap-1">
                     <p className="font-medium">Country:</p>
                     <p className="capitalize">{countryName}</p>
                 </div>

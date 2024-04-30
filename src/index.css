@@ -3,6 +3,48 @@
 @tailwind utilities;
 
 
+
+[data-theme = 'dark'] {
+  --text_color : white;
+  --body__nav : #1d232a;
+  --body_shadow : rgba(77, 77, 77, 0.8) 0px 1px 4px;
+  --body_input: #1d232a;
+}
+
+[data-theme = 'light'] {
+  --body_background1 : #f0f8ff;
+  --body_background2 : #f7f8fa;
+  --body__nav : white;
+  --text_color : black;
+  --body_shadow : rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  --body_input: white;
+}
+
+.text-color{
+  color: var(--text_color);
+}
+
+.bg{
+  background-color: var(--body_background1);
+}
+
+.bg-2{
+  background-color: var(--body_background2);
+}
+
+.navbar {
+  background-color: var(--body__nav);
+}
+
+.shado{
+  box-shadow: var(--body_shadow);
+}
+
+.input{
+  background-color: var(--body_input);
+}
+
+
 /* navbar css */
 .menu-horizontal li a.active {
   background-color: #4482ff;
@@ -18,7 +60,6 @@
   font-weight: 500;
   border-radius: 5px;
 }
-
 
 
 
@@ -89,7 +130,7 @@
 
 /* home page */
 .slider {
-  height: 600px;
+  height: 75vh;
   background-position: center;
   border-radius: 20px;
   background-repeat: no-repeat;
@@ -217,8 +258,9 @@
 
 /* login page css */
 .form input {
-  border-radius: 0px;
+  border-radius: 5px;
   outline: none;
+  border: 1px solid rgb(233, 233, 233);
 }
 
 .input:focus {
@@ -265,7 +307,7 @@
 
 /* add-tourists-spot page */
 .add-tourists-spot {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
   padding: 20px;
   border-radius: 10px;
 }
@@ -277,6 +319,7 @@
   height: 45px;
   border-radius: 6px;
   padding: 0px 10px;
+  /* background-color: #1d232a; */
 }
 
 
@@ -289,7 +332,10 @@
   padding: 10px 10px;
   width: 100%;
   height: 100px;
+  /* background-color: white; */
+  /* color: black; */
 }
+
 
 
 
@@ -387,6 +433,11 @@
     min-height: 250px !important;
     max-height: 250px !important;
   }
+  
+  .book-details-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px 0px;
+  }
 }
 
 
@@ -444,6 +495,13 @@
     width: 45%;
   }
 
+  .title{
+    font-size: 30px;
+  }
+
+  .sub-title{
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 480px) {
