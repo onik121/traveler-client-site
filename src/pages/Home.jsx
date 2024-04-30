@@ -14,7 +14,7 @@ const Home = () => {
         <div>
             <div className="">
                 <Helmet>
-                    <title>Travler</title>
+                    <title>Traveler</title>
                 </Helmet>
                 <div className="max-w-[1440px] px-5 mx-auto">
                     <Slider></Slider>
