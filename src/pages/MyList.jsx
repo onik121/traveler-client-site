@@ -4,6 +4,7 @@ import MyListCart from "../components/MyListCart";
 import cart from '../assets/add-to-cart.png'
 import { Link } from "react-router-dom";
 import { Scroll } from "../components/Scroll";
+import { Helmet } from "react-helmet";
 
 const MyList = () => {
 
@@ -28,6 +29,9 @@ const MyList = () => {
 
     return (
         <div className='w-full max-w-[1440px] mx-auto px-5 min-h-[600px] flex items-center'>
+            <Helmet>
+                    <title>My List</title>
+                </Helmet>
             <Scroll></Scroll>
             <div className="w-full">
                 {

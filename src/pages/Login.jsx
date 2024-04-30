@@ -7,6 +7,7 @@ import toast from 'react-hot-toast';
 import { FacebookAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 import { Scroll } from "../components/Scroll";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
 
@@ -14,7 +15,6 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const googlrProvider = new GoogleAuthProvider();
-    // const githubProvider = new GithubAuthProvider();
     const facebookProvider = new FacebookAuthProvider();
 
     const handleLogin = e => {
@@ -23,7 +23,7 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         loginUser(email, password)
-            .then( () => {
+            .then(() => {
                 form.reset()
                 navigate(location?.state ? location.state : '/')
                 toast.success('Login Successfull')
@@ -58,6 +58,9 @@ const Login = () => {
 
     return (
         <div className="hero flex flex-col items-center justify-center min-h-[650px] max-w-[1440px] mx-auto px-5">
+            <Helmet>
+                <title>Login Your Account</title>
+            </Helmet>
             <Scroll></Scroll>
             <div className="flex items-center justify-center flex-col lg:flex-row-reverse p-0 w-full gap-x-20">
                 <div className="text-center lg:text-left">

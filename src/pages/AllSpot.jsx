@@ -1,7 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import AllspotCart from "../components/AllspotCart";
 import { Scroll } from "../components/Scroll";
-
+import { Helmet } from "react-helmet";
 
 const AllSpot = () => {
 
@@ -9,6 +9,9 @@ const AllSpot = () => {
 
     return (
         <div className="w-full max-w-[1440px] mx-auto px-5 mt-5 mb-10">
+            <Helmet>
+                    <title>All Tour Spot</title>
+                </Helmet>
             <Scroll></Scroll>
             <div>
                 <h1 className='text-4xl text-center font-semibold mb-6 title text-color'>Explore all Tourist Spot Here</h1>

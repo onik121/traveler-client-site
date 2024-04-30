@@ -4,6 +4,7 @@ import Cart from '../components/Cart';
 import GetUpdate from '../components/GetUpdate';
 import Countries from '../components/Countries';
 import img from '../assets/h1-img-1.png'
+import { Helmet } from "react-helmet";
 
 const Home = () => {
 
@@ -12,6 +13,9 @@ const Home = () => {
     return (
         <div>
             <div className="">
+                <Helmet>
+                    <title>Travler</title>
+                </Helmet>
                 <div className="max-w-[1440px] px-5 mx-auto">
                     <Slider></Slider>
                 </div>
