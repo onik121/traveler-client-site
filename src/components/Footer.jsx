@@ -38,7 +38,7 @@ const Footer = () => {
                     </div>
                 </nav>
             </footer>
-            <footer className="footer footer-center py-4 font-medium text-color bg">
+            <footer className="footer footer-center py-4 font-medium text-color bg footer-top">
                 <p className="text-base">Copyright © 2024 - All right reserved by Travler Ltd.</p>
             </footer>
         </div>

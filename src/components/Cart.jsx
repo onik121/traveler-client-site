@@ -10,7 +10,7 @@ const Cart = ({ touristsSpot }) => {
     const { image, average_cost, travel_time, countryName, location, title, totalVisitorsPerYear, _id } = touristsSpot;
 
     return (
-        <div className="touristsSpot-cart rounded-3xl overflow-hidden sm:min-h-[450px]">
+        <div className="rounded-3xl overflow-hidden sm:min-h-[450px] shado">
             <img className="w-full tourspots-img" src={image}></img>
             <div className="p-5">
                 <div className="flex items-center gap-6 mb-3 -ml-1">

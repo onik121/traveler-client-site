@@ -56,7 +56,7 @@ const Register = () => {
             <div className="flex items-center justify-center flex-col lg:flex-row-reverse p-0 w-full gap-x-20">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold title text-color">Register your account</h1>
-                    <p className="py-6 login-details text-color">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <p className="py-6 login-details text-color font-medium sub-title">Unlock exclusive travel perks, personalized recommendations, and seamless booking experiences by creating your account with us today. Join now!</p>
                 </div>
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl rounded-none">
                     <form className="card-body form" onSubmit={handleRegister}>

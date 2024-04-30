@@ -186,7 +186,7 @@
   font-size: 20px !important;
   font-weight: 600 !important;
   margin-left: -4px;
-}
+}ox-shadow
 
 .swiper-pagination-bullet {
   background: white !important;
@@ -204,9 +204,6 @@
   gap: 30px 30px;
 }
 
-.touristsSpot-cart {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
 
 .country-container {
   display: grid;
@@ -241,7 +238,7 @@
 
 .update-container input {
   outline: none;
-  padding: 0px 20px;
+  padding: 0px 10px;
   height: 100%;
   height: 50px;
   border-radius: 10px;
@@ -319,7 +316,6 @@
   height: 45px;
   border-radius: 6px;
   padding: 0px 10px;
-  /* background-color: #1d232a; */
 }
 
 
@@ -332,8 +328,6 @@
   padding: 10px 10px;
   width: 100%;
   height: 100px;
-  /* background-color: white; */
-  /* color: black; */
 }
 
 
@@ -379,16 +373,9 @@
 }
 
 
-/* .tabular-form {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 0px 20px;
-} */
-
-
-/* .tabular-form > div {
-  background-color: red;
-} */
+.footer-top{
+  border-top: 1px solid rgb(233, 233, 233);
+}
 
 
 /* responsive css code */
