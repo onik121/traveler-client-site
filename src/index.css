@@ -333,6 +333,16 @@
 }
 
 
+/* .tabular-form {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0px 20px;
+} */
+
+
+/* .tabular-form > div {
+  background-color: red;
+} */
 
 
 /* responsive css code */
@@ -397,6 +407,15 @@
   .country-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .tabular-form {
+    justify-content: start;
+  }
+
+  .tabular-form>div {
+    width: 31%;
+  }
+
 }
 
 @media screen and (max-width: 680px) {
@@ -420,12 +439,21 @@
   .country-container {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .tabular-form>div {
+    width: 45%;
+  }
+
 }
 
 @media screen and (max-width: 480px) {
   .tourspots-img {
     min-height: 250px !important;
     max-height: 250px !important;
+  }
+
+  .tabular-form>div {
+    width: 100%;
   }
 }
 

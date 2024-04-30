@@ -9,7 +9,7 @@ const Footer = () => {
             <footer className="footer pt-10 pb-14 max-w-[1440px] mx-auto px-5">
                 <aside className='max-w-[300px]'>
                     <img src={logo}></img>
-                    <p className='mt-3 text-base font-semibold'>Discover a place to call your own where dreams come home.</p>
+                    <p className='mt-3 text-base font-semibold'>Explore destinations, plan adventures, and book your next journey today.</p>
                 </aside>
                 <nav>
                     <h6 className="text-2xl text-black font-semibold mb-2">Legal</h6>
@@ -21,7 +21,7 @@ const Footer = () => {
                     <h6 className="text-2xl text-black font-semibold mb-2">Contact Us</h6>
                     <a className="link link-hover">Feni Sadar, Feni, Bangladesh</a>
                     <a className="link link-hover">+88 01608272038</a>
-                    <a className="link link-hover">roam@qodeinteractive.com</a>
+                    <a className="link link-hover">hasanjahid557788@gmail.com</a>
                 </nav>
                 <nav>
                     <h6 className="text-2xl text-black font-semibold mb-2">Follow Us</h6>
@@ -39,7 +39,7 @@ const Footer = () => {
                 </nav>
             </footer>
             <footer className="footer footer-center py-4 bg-[#f0f8ff] text-black font-medium">
-                <p className="text-base">Copyright © 2024 - All right reserved by My Home Industries Ltd.</p>
+                <p className="text-base">Copyright © 2024 - All right reserved by Travler Ltd.</p>
             </footer>
         </div>
     );

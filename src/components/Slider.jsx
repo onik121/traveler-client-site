@@ -19,8 +19,8 @@ const Slider = () => {
                 <div className='slider-4 slider'>
                     <div className='overlay flex items-center justify-center'>
                         <div className='text-white text-center max-w-[700px] mx-auto slider-content'>
-                            <h1 className='text-5xl title font-medium'>Discover Your Dream Home Today!</h1>
-                            <p className='text-lg mt-5'>Sustainable residences with green design, eco-friendly materials, and energy-efficient technologies for a greener, more responsible lifestyle.</p>
+                            <h1 className='text-5xl title font-medium'>Experience the Wonders of Exploration</h1>
+                            <p className='text-lg mt-5'>Dive into our curated collection, where hidden gems await exploration. Seamlessly plan your journey and create unforgettable memories.</p>
                         </div>
                     </div>
                 </div>
@@ -29,8 +29,8 @@ const Slider = () => {
                 <div className='slider-2 slider'>
                     <div className='overlay flex items-center justify-center'>
                         <div className='text-white text-center max-w-[700px] mx-auto slider-content'>
-                            <h1 className='text-5xl title'>Your Ultimate Guide to Residential Bliss</h1>
-                            <p className='text-lg mt-5'>Peaceful residences amidst greenery offering sanctuary from city life while maintaining easy urban access.</p>
+                            <h1 className='text-5xl title'>Unleash Your Wanderlust Spirit Here</h1>
+                            <p className='text-lg mt-5'>Embark on a voyage of discovery through diverse destinations. Craft your personalized itinerary and ignite the spark of adventure.</p>
                         </div>
                     </div>
                 </div>
@@ -39,8 +39,8 @@ const Slider = () => {
                 <div className='slider-3 slider'>
                     <div className='overlay flex items-center justify-center'>
                         <div className='text-white text-center max-w-[700px] mx-auto slider-content'>
-                            <h1 className='text-5xl title'>Finding Serenity in Every Space</h1>
-                            <p className='text-lg mt-5'>Charming seaside homes with ocean views, sandy beaches, and relaxed coastal living ambiance for ultimate tranquility.</p>
+                            <h1 className='text-5xl title'>Embark on a Journey of Discovery</h1>
+                            <p className='text-lg mt-5'>Uncover the world&apos;s best-kept travel secrets, effortlessly streamline your bookings, and cherish every moment of your unforgettable journey.</p>
                         </div>
                     </div>
                 </div>

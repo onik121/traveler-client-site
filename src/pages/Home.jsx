@@ -17,12 +17,14 @@ const Home = () => {
                 </div>
                 <div className="bg-[#f7f8fa]">
                     <div className='max-w-[1440px] px-5 mx-auto my-20 py-20'>
-                        <h1 className='text-4xl text-center font-semibold text-black mb-10'>Top Destinations</h1>
+                        <h1 className='text-4xl text-center font-semibold text-black mb-6'>Top Destinations</h1>
+                        <p className='text-center max-w-[720px] mx-auto mb-10 text-lg font-semibold'>Discover our handpicked selection of the world&apos;s most captivating destinations. From iconic landmarks to hidden gems, embark on unforgettable adventures.</p>
                         <Countries></Countries>
                     </div>
                 </div>
                 <div className="max-w-[1440px] px-5 mx-auto mb-16 text-center">
-                    <h1 className='text-4xl text-center font-semibold text-black mb-14'>Explore The World Yourself</h1>
+                    <h1 className='text-4xl text-center font-semibold text-black mb-6'>Explore The World Yourself</h1>
+                    <p className='text-center max-w-[720px] mx-auto mb-10 text-lg font-semibold'>Embark on your own adventures, discover new horizons, and create unforgettable memories around the globe.</p>
                     <img src={img}></img>
                 </div>
                 <div className='flex bg-[#f7f8fa]'>

@@ -1,14 +1,10 @@
-import { Link } from "react-router-dom";
-import { CiLocationOn } from "react-icons/ci";
-import { IoTimeOutline } from "react-icons/io5";
-import { MdOutlineAttachMoney } from "react-icons/md";
-import { FaUserFriends } from "react-icons/fa";
 import Swal from 'sweetalert2'
 import PropTypes from 'prop-types'; // ES6
+import { Link } from 'react-router-dom';
 
 const MyListCart = ({ cartData, setData, datas }) => {
 
-    const { image, average_cost, travel_time, countryName, location, title, totalVisitorsPerYear, _id } = cartData;
+    const { average_cost, travel_time, countryName, location, totalVisitorsPerYear, _id, seasonality } = cartData;
 
     const handleDelete = (id) => {
         Swal.fire({
@@ -19,7 +15,7 @@ const MyListCart = ({ cartData, setData, datas }) => {
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
                 fetch(`https://assignment-10-server-red-seven.vercel.app/tourspot/${_id}`, {
                     method: 'DELETE'
@@ -37,38 +33,48 @@ const MyListCart = ({ cartData, setData, datas }) => {
                         }
                     })
             }
-          });
+        });
     }
 
 
     return (
-        <div className="bg-white touristsSpot-cart rounded-3xl overflow-hidden sm:min-h-[450px]">
-            <img className="w-full tourspots-img" src={image}></img>
-            <div className="p-5">
-                <div className="flex items-center gap-6 mb-3 -ml-1">
-                    <div className="flex items-center gap-1"><CiLocationOn className="text-xl" /><p>{countryName}, {location}</p></div>
-                    <div className="flex items-center gap-2"><FaUserFriends className="text-xl" /><p>{totalVisitorsPerYear}</p></div>
+        <div className="w-full">
+            <div className="w-full touristsSpot-cart flex flex-wrap justify-around my-5 p-5 items-center tabular-form gap-5">
+                <div className="flex gap-1 text-black">
+                    <p className="font-medium">Country:</p>
+                    <p className="capitalize">{countryName}</p>
                 </div>
-                <h3 className="text-xl text-black font-semibold">{title}</h3>
-                <div className="line mt-4 mb-5"></div>
-                <div className="flex items-center justify-between -ml-1">
-                    <div className="flex items-center text-lg font-medium"><MdOutlineAttachMoney className="text-xl" /><p>{average_cost}</p></div>
-                    <div className="flex items-center gap-1"><IoTimeOutline className="text-xl mt-[2px]" /><p className="capitalize">{travel_time}</p></div>
+                <div className="flex gap-1">
+                    <p className="font-medium">Location:</p>
+                    <p>{location}</p>
                 </div>
-                <div className="flex gap-5 mt-1">
-                    <Link to={`/details/${_id}`}><button className="read-more mt-4">Read More</button></Link>
-                    <Link to={`/update/${_id}`}><button className="read-more mt-4">Update</button></Link>
-                    <button className="read-more mt-4" onClick={ () => handleDelete(_id)}>Delate</button>
+                <div className="flex gap-1">
+                    <p className="font-medium">Travle Time:</p>
+                    <p>{travel_time}</p>
                 </div>
+                <div className="flex gap-1">
+                    <p className="font-medium">Cost:</p>
+                    <p>{average_cost}</p>
+                </div>
+                <div className="flex gap-1">
+                    <p className="font-medium">Visitor Per Year:</p>
+                    <p>{totalVisitorsPerYear}</p>
+                </div>
+                <div className="flex gap-1">
+                    <p className="font-medium">Seasonality:</p>
+                    <p className="capitalize">{seasonality}</p>
+                </div>
+                <div><Link to={`/update/${_id}`}><button className="read-more">Update</button></Link></div>
+                <div><button className="read-more" onClick={() => handleDelete(_id)}>Delate</button></div>
             </div>
         </div>
     );
 };
 
 MyListCart.propTypes = {
-    cartData : PropTypes,
+    cartData: PropTypes,
     setData: PropTypes,
-    datas : PropTypes,
+    datas: PropTypes,
 }
 
 export default MyListCart;
