@@ -1,6 +1,6 @@
 # React + Vite
 + Website Name: Traveler
-+ Live Url: https://aesthetic-crisp-ad577c.netlify.app/
++ Live Url: https://travelrguide.netlify.app
 
 # Features of my website
 + The website is fully responisve
