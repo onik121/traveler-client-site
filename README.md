@@ -11,7 +11,7 @@
 + google and github login
 + User will be able to add her won favourite tour spot
 
-## Technologies i used on this prokject: 
+## Technologies i used on this project: 
 <div>
   <img src="https://skillicons.dev/icons?i=html" height="45" alt="html5 logo"  />
   <img width="15" />
